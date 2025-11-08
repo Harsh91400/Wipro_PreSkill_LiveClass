@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 - Digital Art Museum</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header, footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .item {
+            width: 250px;
+            border: 1px solid gray;
+            padding: 10px;
+            text-align: center;
+            transition: 0.3s; 
+        }
+
+        
+        .item:hover {
+            background-color: #f0f0f0;
+            border-color: black;
+        }
+
+        .item img {
+            width: 100%;
+            height: 150px;
+            transition: 0.3s; 
+        }
+
+        .item img:hover {
+            transform: scale(1.05); 
+        }
+
+        .caption {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h2>Digital Art and Museum Gallery</h2>
+</header>
+
+<div class="gallery">
+
+    <div class="item">
+        <img src="https://picsum.photos/250/150?random=1" alt="">
+        <p class="caption">Sunset Art - Artist: Maya (2020)</p>
+    </div>
+
+    <div class="item">
+        <img src="https://picsum.photos/250/150?random=2" alt="">
+        <p class="caption">Stone Sculpture - Artist: Arjun (2019)</p>
+    </div>
+
+    <div class="item">
+        <img src="https://picsum.photos/250/150?random=3" alt="">
+        <p class="caption">Digital Waves - Artist: Sara (2021)</p>
+    </div>
+
+    <div class="item">
+        <img src="https://picsum.photos/250/150?random=4" alt="">
+        <p class="caption">Machine Model - Inventor: Tesla (1915)</p>
+    </div>
+
+    <div class="item">
+        <img src="https://picsum.photos/250/150?random=5" alt="">
+        <p class="caption">Abstract Form - Artist: Ravi (2022)</p>
+    </div>
+
+    <div class="item">
+        <img src="https://picsum.photos/250/150?random=6" alt="">
+        <p class="caption">Modern Canvas - Artist: Lily (2018)</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>Thanks for visiting the Digital Museum Gallery</p>
+</footer>
+
+</body>
+</html>

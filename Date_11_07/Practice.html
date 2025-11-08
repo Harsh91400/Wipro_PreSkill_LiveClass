@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spring Flowers School | Student Management</title>
+
+<style>
+  body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background: #f7f4ef;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  header {
+    background: #f2c08b;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .brand {
+    font-weight: bold;
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    background: #fff;
+    padding: 6px 10px;
+    margin-right: 6px;
+    border-radius: 4px;
+    color: #000;
+  }
+
+  .main {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    background: #f2c08b;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 300px;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 140px;
+    background: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    flex-grow: 1;
+  }
+
+  /* Show / Hide without JavaScript */
+  #profile { display: none; }
+  #profile:target { display: block; }
+  #profile:target ~ #welcome { display: none; }
+
+  footer {
+    text-align: center;
+    margin-top: 12px;
+    color: #555;
+  }
+
+  @media(max-width:700px){
+    .main { flex-direction: column; }
+    .avatar { margin: auto; }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="brand">Spring Flowers School</div>
+    <nav>
+      <a href="#welcome">Home</a>
+      <a href="#profile">Student Profile</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <div class="avatar"><img src="data:image/png;base64,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" alt="" width="200px" height="100px"</div>
+
+    <div id="welcome" class="card">
+      <h2>Welcome</h2>
+      <p>Click on Student Profile to view details.</p>
+    </div>
+
+    <div id="profile" class="card">
+      <h2>Student Information</h2>
+      <p><strong>Name:</strong> Jane Doe</p>
+      <p><strong>Class:</strong> 10</p>
+      <p><strong>Roll No:</strong> 24</p>
+      <a href="#welcome">Back</a>
+    </div>
+  </div>
+
+  <footer>© Spring Flowers School</footer>
+
+</div>
+
+</body>
+</html>
