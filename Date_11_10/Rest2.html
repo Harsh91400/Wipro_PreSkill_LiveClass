@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            const sum = (...numbers) => {
+                let res = 0;
+                numbers.forEach(x => {
+                    res +=x;
+                })
+                return res;
+            }
+        </script>
+    </head>
+<body>
+    <script>
+        document.writeln("Sum with 2 args " +sum(12,5) + "<br/>");
+        document.writeln("Sum with 3 args  " +sum(12,5,22) + "<br/>");
+        document.writeln("Sum wih 4 args " +sum(12,22,55,11) + "<br/>");
+        // document.writeln(sum(12,45,11,77,211,31));
+    </script>
+</body>
+</html>

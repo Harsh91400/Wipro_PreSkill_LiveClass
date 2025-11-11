@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+             var students = new Array(
+                {empno:1,name:'Rajitha',dept:'Java',desig:'Programmer',basic:88324},
+                {empno:2,name:'Nagaraju',dept:'Dotnet',desig:'Manager',basic:90042},
+                {empno:3,name:'Surya',dept:'Dotnet',desig:'TeamLead',basic:94422},
+                {empno:4,name:'Ashwini',dept:'Sql',desig:'Manager',basic:66622},
+                {empno:5,name:'Vijay',dept:'Sql',desig:'Expert',basic:66622},              
+            );
+        </script>
+    </head>
+    <body>
+        <table border="3" align="center">
+            <tr>
+                <th>Employ No</th>
+                <th>Employ Name</th>
+                <th>Department</th>
+                <th>Designation</th>
+                <th>Basic</th>
+            </tr>
+            <script>
+                students.forEach(x => {
+                    document.writeln("<tr>");
+                    document.writeln("<td>" +x.empno + "</td>");
+                    document.writeln("<td>" +x.name + "</td>");
+                    document.writeln("<td>" +x.dept + "</td>");
+                    document.writeln("<td>" +x.desig + "</td>");
+                    document.writeln("<td>" +x.basic + "</td>");
+                    
+                })
+            </script>
+        </table>
+    </body>
+</html>

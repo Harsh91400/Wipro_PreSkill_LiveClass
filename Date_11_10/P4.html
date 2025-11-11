@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var sname;
+                sname = frmData.sname.value;
+                console.log("Name is " +sname);
+                // alert("Student Name is " +sname);
+                document.getElementById("result").innerHTML = "Student Name is : <b>" +sname + "</b>";
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmData">
+        <center>
+            Student Name : 
+            <input type="text" name="sname" autofocus /> <br/><br/>
+            <input type="button" value="Show" onclick="show()" /> <hr/>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>

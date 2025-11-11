@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            const show = () => {
+                let url = "https://jsonplaceholder.typicode.com/users";
+                let res = fetch(url);
+                res.then(res => res.json()).then(x => {
+                    // console.log(x);
+                    x.forEach(p => {
+                        console.log("Id " +p.id + " Name " +p.name + " User Name " +p.username + 
+                            " Email " +p.email
+                        );
+                    });
+                })
+            }
+        </script>
+    </head>
+<body>
+    <script>
+        show();
+    </script>
+</body>
+</html>
